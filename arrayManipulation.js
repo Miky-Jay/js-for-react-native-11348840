@@ -9,3 +9,14 @@ function processArray(arr) {
   }
   return processedArray;
 }
+function formatArrayStrings(strings, processedNumbers) {
+  const formattedStrings = [];
+  for (let i = 0; i < strings.length; i++) {
+    if (processedNumbers[i] % 2 === 0) {
+      formattedStrings.push(strings[i].toUpperCase()); // Uppercase for even numbers
+    } else {
+      formattedStrings.push(strings[i].toLowerCase()); // Lowercase for odd numbers
+    }
+  }
+  return formattedStrings;
+}
